@@ -1,6 +1,22 @@
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
+buildscript {
+    repositories {
+        maven {
+            url("${repoUrl}")
+        }
+    }
+
+    dependencies {
+        classpath("commons-io:commons-io:2.8.0")
+    }
+}
+
+import org.apache.commons.io.FileUtils
+
+FileUtils.copyFile(file("gradle.properties.template"), file("gradle.properties"))
+
 subprojects {
     repositories {
         maven {

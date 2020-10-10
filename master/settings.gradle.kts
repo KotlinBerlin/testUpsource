@@ -8,6 +8,10 @@ buildscript {
     repositories {
         maven(repoUrl)
     }
+
+    dependencies {
+        classpath("commons-io:commons-io:2.8.0")
+    }
 }
 
 for (project in rootProject.children) {
