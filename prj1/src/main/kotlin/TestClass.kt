@@ -1,3 +1,3 @@
-fun main() {
+fun test() {
     println("Test")
 }

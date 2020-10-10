@@ -1,6 +1,7 @@
 rootProject.name = "TestUpsourceSubprojects"
 
 include("prj1")
+include("prj2")
 
 buildscript {
     val repoUrl: String by settings
