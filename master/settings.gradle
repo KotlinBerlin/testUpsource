@@ -1,0 +1,11 @@
+rootProject.name = "TestUpsourceSubprojects"
+
+include("prj1")
+include("prj2")
+
+for (project in rootProject.children) {
+    project.buildFileName = "../master/projects/${project.name}.gradle"
+    project.projectDir = file("../${project.name}")
+
+    println(project.buildFile.absolutePath)
+}
