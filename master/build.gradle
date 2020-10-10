@@ -7,15 +7,7 @@ buildscript {
             url("${repoUrl}")
         }
     }
-
-    dependencies {
-        classpath("commons-io:commons-io:2.8.0")
-    }
 }
-
-import org.apache.commons.io.FileUtils
-
-FileUtils.copyFile(file("gradle.properties.template"), file("gradle.properties"))
 
 subprojects {
     repositories {
